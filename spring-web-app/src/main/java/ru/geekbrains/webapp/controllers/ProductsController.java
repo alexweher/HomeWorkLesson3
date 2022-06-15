@@ -46,8 +46,16 @@ public class ProductsController {
 
     // POST http://localhost:8189/app/add
     @PostMapping(value = "/add")
-    public String saveProduct(@RequestParam Long id, @RequestParam String name,@RequestParam int price){
+    public String saveProduct(@RequestParam Long id, @RequestParam String name, @RequestParam int price) {
         productsService.save(new Product(id, name, price));
         return "redirect:/show_all";
+    }
+
+    //localhost:8189/app/changePrice
+    @GetMapping(value = "/changeUp/{id}")
+    public String changePrice(@PathVariable int price) {
+        productsService.changePrice(price);
+        return "redirect:/show_all";
+
     }
 }

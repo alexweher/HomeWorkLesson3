@@ -44,4 +44,8 @@ public class ProductRepository {
 
         return products.stream().filter(p->p.getId().equals(id)).findFirst().get();
     }
+
+    public int changePrice(int price){
+        return price+1;
+    }
 }
