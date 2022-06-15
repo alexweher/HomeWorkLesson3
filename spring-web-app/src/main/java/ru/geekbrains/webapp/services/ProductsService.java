@@ -37,4 +37,8 @@ public class ProductsService {
         return productRepository.findById(id);
 
     }
+
+    public int changePrice(int price){
+        return productRepository.changePrice(price);
+    }
 }

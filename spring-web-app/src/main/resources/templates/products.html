@@ -31,6 +31,8 @@
             <td>
 
                 <a th:href="@{'/show/'+${p.id}}" class="btn btn-primary">Подробнее</a>
+        <a th:href="@{'/changePrice/'+${p.price}}" class="btn btn-primary">+</a>
+        <a th:href="@{'/changePrice/'+${p.price}}" class="btn btn-primary">-</a>
 
             </td>
         </tr>
